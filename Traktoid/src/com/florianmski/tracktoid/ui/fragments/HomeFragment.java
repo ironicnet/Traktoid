@@ -212,7 +212,7 @@ public class HomeFragment extends TraktFragment implements onDashboardButtonClic
 					episode = checkin.episode;
 					rlWatchingNow.setVisibility(View.VISIBLE);
 					tvEpisodeTitle.setText(episode.title);
-					tvEpisodeEpisode.setText(Utils.addZero(episode.season) + "x" + Utils.addZero(episode.number));
+					tvEpisodeEpisode.setText(Utils.addZero(episode.number) + "x" + Utils.addZero(episode.season));
 					Image i = new Image(checkin.show.tvdbId, episode.images.screen, episode.season, episode.number);
 					final AQuery aq = new AQuery(getActivity());
 					BitmapAjaxCallback cb = new BitmapAjaxCallback()
